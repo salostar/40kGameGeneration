@@ -1,0 +1,55 @@
+import random
+
+Deployment = ['Search and Destroy','Dawn of War','Sweeping Engagement',
+              'Crucible of Battle','Hammer and Anvil']
+
+PrimaryMission = ['Take and Hold','Scorched Earth','Purge the Foe',
+                  'Sites of Power','The Ritual','Priority Targets',
+                  'Supply Drop','Deploy Servo-Skulls','Vital Ground']
+
+MissionRule = ['Chosen Battlefield','Chilling Rain','Sweep and Clear',
+               'Hidden Supplies','Minefields','Targets of Opportunity',
+               'Scrambler Fields','Delayed Reserves','Maelstrom of Battle',]
+               'Supply Lines','Secret Intel','Vox Static']
+
+DeploymentMissionSelection = random.choice(Deployment)
+print ("Deployment: " + DeploymentMissionSelection)
+
+PrimaryMissionSelection = random.choice(PrimaryMission)
+print ("Primary Mission: " + PrimaryMissionSelection)
+
+MissionRuleSelection = random.choice(MissionRule)
+
+if MissionRuleSelection is 'Maelstrom of Battle':
+    print ("Mission Rule: " + MissionRuleSelection + " Reshuffle and draw 2:")
+    MissionRule.remove('Maelstrom of Battle')
+    
+    MissionRuleSelection2 = random.choice(MissionRule)
+    if MissionRuleSelection2 is 'Chilling Rain':
+        print ("Mission Rule: " + MissionRuleSelection2 + " Reshuffle and draw 2:")
+        MissionRule.remove('Chilling Rain')
+        MissionRuleSelection22 = random.choice(MissionRule)
+        print (MissionRuleSelection22)
+        MissionRule.remove(MissionRuleSelection22)
+        MissionRuleSelection23 = random.choice(MissionRule)
+        print (MissionRuleSelection23)
+        MissionRule.remove(MissionRuleSelection23)
+    else: 
+        print (MissionRuleSelection2)
+        MissionRule.remove(MissionRuleSelection2)
+        
+    MissionRuleSelection3 = random.choice(MissionRule)
+    if MissionRuleSelection3 is 'Chilling Rain':
+        print ("Mission Rule: " + MissionRuleSelection3 + " Reshuffle and draw 2:")
+        MissionRule.remove('Chilling Rain')
+        MissionRuleSelection32 = random.choice(MissionRule)
+        print (MissionRuleSelection32)
+        MissionRule.remove(MissionRuleSelection32)
+        MissionRuleSelection33 = random.choice(MissionRule)
+        print (MissionRuleSelection33)
+    else: 
+        print (MissionRuleSelection3)
+   
+else:
+    print ("Mission Rule: " + MissionRuleSelection)
+
